@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    image: deepali1998/car_prediction_1:a2.0
+    build:
+      context: .
+      dockerfile: appl.Dockerfile
+    environment:
+      - HOST=0.0.0.0
+      - PORT=80
+    ports:
+      - 4000:80
